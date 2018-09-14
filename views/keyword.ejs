@@ -1,0 +1,14 @@
+<% include partials/header %>
+<h1>Some News for You</h1>
+
+<% data["articles"].forEach(function(news) { %>
+   <div>
+       <h2><%= news["title"] %></h2>
+       <p><span>Source:<%= news["source"]["name"] %> </span><span> Date:<%= news["publishedAt"] %></span></p>
+       <p class="description"><%= news["description"] %></p>
+       <p><a href ='<%= news["url"] %>'> Read More..</a></p>
+       
+   </div>
+<% }); %>
+
+<%include partials/footer%>

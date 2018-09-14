@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset = "utf-8">
+        <meta name = "Description" content= "">
+        <meta name = "keyword" content= "">
+        <link rel = "stylesheet" href = "/stylesheets/app.css">
+        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet"> 
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Faster+One|Nova+Mono" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="row">
+                
+                <div class=" col-sm-4 ">
+                    <div id="header">
+                        <h1 id= "site-title">Padi News</h1>
+                        <p class="tagline">News Tailored right down to your Taste</p>
+                    </div>
+                    
+                </div>
+            
+                <div class="col-sm-4 order-first">
+                <div class="filter-form1">    
+                    <form action="/results/category" method="GET">
+                        <label for ="category" >Filter News by Category  </label><br/>
+                        <select name ="category" id="category">
+                            <option value="">Select a Category </option>
+                            <option value="general">General</option>
+                            <option value="health">Health</option>
+                            <option value="science">Science</option>
+                            <option value="sports">Sports</option>
+                            <option value="technology">Technology</option>
+                            
+                        </select>
+                    
+                        <button class="">Go</button>
+                        
+                    </form>
+                </div>           
+                </div>
+            
+               <div class="col-sm-4 order-last">
+                <div class="filter-form2">   
+                    <form action="/results/keyword" method="GET">
+                        <label for = "keyword">Filter News by Keyword  </label><br/>
+                        <input id="keyword" type="text"  name="keyword" placeholder = "Enter a Keyword">
+                    
+                        <button>Go</button>
+                    </form>
+                </div>    
+                </div> 
+            </div>
+            
+            
+        </header>
+
+    

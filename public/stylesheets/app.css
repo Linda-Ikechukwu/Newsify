@@ -1,0 +1,71 @@
+body{
+    width:100%;
+    min-height:100%;
+    position: relative;
+    margin: 0;
+    padding-bottom: 100px; 
+    font-family: 'Nova Mono', monospace !important;
+}
+html{
+    height: 100%;
+    box-sizing: border-box;
+
+}
+
+/*General Styles*/
+hr{
+    background-color: #563d7c; 
+    height: 1px; 
+    border: 0;
+}
+
+/*Header styles*/
+
+header{
+    background-color:#563d7c;
+    height:100%;
+    width:100%;
+    color:white;
+}
+#header{
+    text-align:center;
+    font-family: 'Faster One', cursive;
+}
+.filter-form1{
+   padding-left: 40px;
+   font-family: 'Nova Mono', monospace; 
+}
+.filter-form2{
+    padding-right: 20px;
+    font-family: 'Nova Mono', monospace;
+}
+.filter-form1 , .filter-form2{
+    margin-top: 20px;
+}
+.filter-form1 select,.filter-form2 input{
+    width: 75%;
+    height:37px;
+}
+.filter-form1 button,.filter-form2 button{
+   width:20%;
+   height:37px;
+   border: 1px solid white;
+   background-color: #563d7c;
+   border-radius:3px ;
+   color:white;
+}
+
+
+/*Search Form Styling*/
+
+
+/*Footer Styles*/
+footer{
+    width:100%;
+    position:absolute;
+    bottom:0;
+    height:60px;
+}
+footer p{
+    text-align:center;
+}
