@@ -18,6 +18,7 @@ hr{
     height: 1px; 
     border: 0;
 }
+/*//End Of General Styles*/
 
 /*Header styles*/
 
@@ -56,8 +57,35 @@ header{
 }
 
 
-/*Search Form Styling*/
+/*//End Of Header*/
 
+/*News Cards*/
+.card{
+    margin-top: 40px;
+    box-shadow: 0 0 0.5em rgb(29, 29, 29);
+}
+.card-img-top{
+    min-height: 250px;
+}
+h6.card-subtitle{
+    font-weight:bold;
+}
+p.description{
+    padding-top: 15px;
+    height:110px;
+    overflow: hidden;
+}
+p.description:after{
+    content: "";
+    text-align: right;
+    position: absolute;
+    bottom: 76px;
+    right: 0;
+    width: 95%;
+    height: 24px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+}
+/*//End of news cards*/
 
 /*Footer Styles*/
 footer{
