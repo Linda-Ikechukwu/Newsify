@@ -5,12 +5,12 @@
         <% data["articles"].forEach(function(news) { %>
         <div class="col-md-4 col-sm-6">
             <div class="card">
-                <img class="card-img-top" src='<%=news["urlToImage"] %>''>
+                <img class="card-img-top" src="<%=news['urlToImage'] %>">
                 <div class="card-body">
                     <h4 class="card-title"><%= news["title"] %></h4>
                     <h6><span>Source:<%= news["source"]["name"] %> </span><span> Date:<%= news["publishedAt"] %></span></h6>
                     <p class=" card-text description"><%= news["description"] %></p>
-                    <p><a href ="<%= news['url'] %>"> Read More..</a></p>
+                    <p><a href ="/news/category/<%=news.title%>"> Read More..</a></p>
                 </div>
             </div>
         </div>

@@ -6,7 +6,8 @@
         <meta name = "Description" content= "">
         <meta name = "keyword" content= "">
         <link rel = "stylesheet" href = "/stylesheets/app.css">
-        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" > 
         <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Faster+One|Nova+Mono" rel="stylesheet">
     </head>
@@ -14,17 +15,17 @@
         <header>
             <div class="row">
                 
-                <div class=" col-sm-4 ">
-                    <div id="header">
+                <div class=" col-md-4 order-md-first">
+                    <div id="site-header">
                         <h1 id= "site-title">Padi News</h1>
                         <p class="tagline">News Tailored right down to your Taste</p>
                     </div>
                     
                 </div>
             
-                <div class="col-sm-4 order-first">
+                <div class="col-md-4 order-first ">
                 <div class="filter-form1">    
-                    <form action="/results/category" method="GET">
+                    <form action="/news/category" method="GET">
                         <label for ="category" >Filter News by Category  </label><br/>
                         <select name ="category" id="category">
                             <option value="">Select a Category </option>
@@ -42,9 +43,9 @@
                 </div>           
                 </div>
             
-               <div class="col-sm-4 order-last">
+               <div class="col-md-4 order-last">
                 <div class="filter-form2">   
-                    <form action="/results/keyword" method="GET">
+                    <form action="/news/keyword" method="GET">
                         <label for = "keyword">Filter News by Keyword  </label><br/>
                         <input id="keyword" type="text"  name="keyword" placeholder = "Enter a Keyword">
                     
