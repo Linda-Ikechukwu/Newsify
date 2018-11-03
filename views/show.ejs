@@ -12,8 +12,8 @@
                 </div>
                 <div class="p-4">
                     <h4 class="card-subtitle">
-                        <span>Source:<%= news["source"]["name"] %> </span>  
-                        <span> Date:<%= news["publishedAt"] %></span>
+                        <span>Source:<%= news["source"]["name"] %> </span>  <br />
+                        <span> Date:<%= news["publishedAt"].substring(0, 10); %></span>
                     </h4>
                     <p class="pt-3"><%= news["content"] %></p>
                 </div>
@@ -23,5 +23,5 @@
         </div>
         
     <%}%>
-  <%})%>      
+  <%});%>      
 <% include partials/footer %>

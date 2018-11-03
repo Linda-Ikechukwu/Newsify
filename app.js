@@ -13,7 +13,7 @@ app.get("/", function(req,res){
 
 
 app.get("/news", function(req, res){
-  let url = "https://newsapi.org/v2/top-headlines?language=en&source!=reddit&apiKey=9b2406747cdb42a4bccfa4a7967da150&pageSize=30";
+  let url = "https://newsapi.org/v2/top-headlines?language=en&source!=reddit&apiKey=9b2406747cdb42a4bccfa4a7967da150&pageSize=100";
   request.get(url,function(error,response,body){
     if(!error && response.statusCode == 200){
       let data = JSON.parse(body);
@@ -25,11 +25,25 @@ app.get("/news", function(req, res){
    
 });
 
+app.get("/news/headlines/:title", function(req,res){
+  let title = req.params.title;
+  let url = "https://newsapi.org/v2/top-headlines?language=en&source!=reddit&apiKey=9b2406747cdb42a4bccfa4a7967da150&pageSize=100";
+  request.get(url,function(error, response, body){
+    if(!error && response.statusCode == 200){
+      let data = JSON.parse(body);
+      res.render("show",{data:data, title:title});
 
+
+    }else{
+      res.render("404");
+    }
+  });  
+ 
+});
 
 app.get("/news/keyword",function(req,res){
    let keywordResults = req.query.keyword;
-   let url = "https://newsapi.org/v2/everything?language=en&q="+keywordResults+"&apiKey=9b2406747cdb42a4bccfa4a7967da150&pageSize=30"; 
+   let url = "https://newsapi.org/v2/everything?language=en&q="+keywordResults+"&apiKey=9b2406747cdb42a4bccfa4a7967da150&pageSize=100"; 
    request.get(url,function(error, response, body){
      if(!error && response.statusCode == 200){
          let data = JSON.parse(body);
@@ -38,6 +52,22 @@ app.get("/news/keyword",function(req,res){
        res.render("404");
      }
    });
+   app.get("/news/keyword/:title", function(req,res){
+    let title = req.params.title;
+    //let keywordResults = req.query.keyword;
+    let url = "https://newsapi.org/v2/everything?language=en&q="+keywordResults+"&apiKey=9b2406747cdb42a4bccfa4a7967da150&pageSize=100";
+    request.get(url,function(error, response, body){
+      if(!error && response.statusCode == 200){
+        let data = JSON.parse(body);
+        res.render("show",{data:data, title:title});
+  
+  
+      }else{
+        res.render("404");
+      }
+    });
+    
+  });
 });
 
 app.get("/news/category", function(req,res){
@@ -54,11 +84,12 @@ app.get("/news/category", function(req,res){
   app.get("/news/category/:title", function(req,res){
     let title = req.params.title;
     //let categoryResult = req.query.category;
-    let url = "https://newsapi.org/v2/top-headlines?country=ng&category="+categoryResult+"&apiKey=9b2406747cdb42a4bccfa4a7967da150&pageSize=30";
+    let url = "https://newsapi.org/v2/top-headlines?country=ng&category="+categoryResult+"&apiKey=9b2406747cdb42a4bccfa4a7967da150&pageSize=100";
+    console.log(url);
     request.get(url,function(error, response, body){
       if(!error && response.statusCode == 200){
         let data = JSON.parse(body);
-        res.render("showcategory",{data:data, title:title});
+        res.render("show",{data:data, title:title});
   
   
       }else{
@@ -66,41 +97,12 @@ app.get("/news/category", function(req,res){
       }
     });
     
-  });
+  });1
 });
 
-app.get("/news/headlines/:title", function(req,res){
-  let title = req.params.title;
-  let url = "https://newsapi.org/v2/top-headlines?language=en&source!=reddit&apiKey=9b2406747cdb42a4bccfa4a7967da150&pageSize=30";
-  request.get(url,function(error, response, body){
-    if(!error && response.statusCode == 200){
-      let data = JSON.parse(body);
-      res.render("showheadlines",{data:data, title:title});
 
 
-    }else{
-      res.render("404");
-    }
-  });  
- 
-});
 
-app.get("/news/keyword/:title", function(req,res){
-  let title = req.params.title;
-  let keywordResults = req.query.keyword;
-  let url = "https://newsapi.org/v2/everything?language=en&q="+keywordResults+"&apiKey=9b2406747cdb42a4bccfa4a7967da150&pageSize=30";
-  request.get(url,function(error, response, body){
-    if(!error && response.statusCode == 200){
-      let data = JSON.parse(body);
-      res.render("showkeywords",{data:data, title:title});
-
-
-    }else{
-      res.render("404");
-    }
-  });
-  
-});
 
 
 

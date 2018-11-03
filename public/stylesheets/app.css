@@ -4,7 +4,7 @@ body{
     position: relative;
     margin: 0;
     padding-bottom: 100px; 
-    font-family: 'Nova Mono', monospace !important;
+    
 }
 html{
     height: 100%;
@@ -28,22 +28,29 @@ header{
     width:100%;
     color:white;
     position:sticky;
+    top:0;
+    z-index: 99;
 }
 #site-header{
     text-align:center;
     font-family: 'Faster One', cursive;
     margin-top: 20px;
 }
+#site-header a{
+    text-decoration:none;
+    color:white;
+}
 .filter-form1{
    padding-left: 40px;
-   font-family: 'Nova Mono', monospace; 
+    
 }
 .filter-form2{
     padding-right: 20px;
-    font-family: 'Nova Mono', monospace;
+    
 }
 .filter-form1 , .filter-form2{
     margin-top: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .filter-form1 select,.filter-form2 input{
     width: 75%;
@@ -56,6 +63,7 @@ header{
    background-color: #1c1a20;
    border-radius:3px ;
    color:white;
+   cursor: pointer;
 }
 
 
@@ -81,8 +89,11 @@ header{
     top:0px;
     left:0;
     right:0;
-    background:rgba(11, 11, 12,0.6);
+    background:rgba(11, 11, 12,0.3);
 
+}
+.carousel-caption h1{
+    color: rgb(161, 12, 112);
 }
 
 /*//End of Headline Slides*/
@@ -91,29 +102,24 @@ header{
 .card{
     margin-top: 40px;
     box-shadow: 0 0 0.5em rgb(29, 29, 29);
-    height: 600px;
+    height: 550px;
 }
 .card-img-top{
     height: 250px;
 }
-h6.card-subtitle{
+h5.card-title{
     font-weight:bold;
+}
+p.card-sub-title{
+    font-size:1rem;
 }
 p.description{
     padding-top: 15px;
     height:82px;
     overflow: hidden;
+    
 }
-p.description:after{
-    content: "";
-    text-align: right;
-    position: absolute;
-    bottom: 76px;
-    right: 0;
-    width: 100%;
-    height: 24px;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
-}
+
 /*//End of news cards*/
 
 /*Show Page styling*/
@@ -121,12 +127,16 @@ p.description:after{
     max-width:800px;
     margin: 30px auto;
     border: 1px solid #1c1a20;
+    padding:0;
 }
 .single-body-img img{
-    max-width:99.9%;
+    width:100%;
     height: 500px;
 }
-
+.single-body .card-title{
+    text-align:center;
+    text-transform: uppercase;
+}
 
 
 /*Footer Styles*/
@@ -141,33 +151,31 @@ footer p{
 }
 
 /*Responsive Styling*/
-@media screen and (max-width:730px){
+@media screen and (max-width:750px){
     header{
-        height:250px;
+        height:260px;
     }
-    #site-header{
-        order:0;
+    #site-header,.filter-form1 , .filter-form2{
+        margin-top:8px;
     }
-    .filter-form1{
-       
+    form{
+        text-align:center;
     }
-    .filter-form2{
-        
+    .filter-form1,.filter-form2{
+       padding:0;
     }
-    .filter-form1 , .filter-form2{
-        margin-top: 30px;
-    }
+    
     .filter-form1 select,.filter-form2 input{
-        width: 60%;
-        height:20px;
+        width: 50%;
+        height:25px;
     }
     .filter-form1 button,.filter-form2 button{
        width:10%;
-       height:20px;
-       border: 1px solid white;
-       background-color: #1c1a20;
-       border-radius:3px ;
-       color:white;
-    }
+       height:25px;
        
+    }
+    
+    .card-img-top{
+        height:200px;
+    }   
 }
