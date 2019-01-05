@@ -10,13 +10,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" > 
         <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Faster+One|Roboto+Condensed" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     </head>
     <body>
-        <header>
+        <div class="header">
             <div class="row">
                 
                 <div class="col-sm-12 col-md-4 ">
-                    <div id="site-header">
+                    <div id="site-tag">
                         <a href="/news"><h1 id= "site-title">Padi News</h1></a>
                         <p class="tagline">News Tailored right down to your Taste</p>
                     </div>
@@ -26,9 +27,9 @@
                 <div class="col-sm-12 col-md-4  order-md-first ">
                 <div class="filter-form1">    
                     <form action="/news/category" method="GET">
-                        <label for ="category" >Filter News by Category  </label><br/>
+                        <label for ="category" >  </label><br/>
                         <select name ="category" id="category">
-                            <option value="">Select a Category </option>
+                            <option value="">Search News By Category </option>
                             <option value="general">General</option>
                             <option value="health">Health</option>
                             <option value="science">Science</option>
@@ -37,7 +38,7 @@
                             
                         </select>
                     
-                        <button class="">Go</button>
+                        <button class=""><i class="fab fa-searchengin"></i></button>
                         
                     </form>
                 </div>           
@@ -46,16 +47,16 @@
                <div class=" col-sm-12 col-md-4 order-md-last">
                 <div class="filter-form2">   
                     <form action="/news/keyword" method="GET">
-                        <label for = "keyword">Filter News by Keyword  </label><br/>
-                        <input id="keyword" type="text"  name="keyword" placeholder = "Enter a Keyword">
+                        <label for = "keyword">  </label><br/>
+                        <input id="keyword" type="text"  name="keyword" placeholder = "Search News By Keyword">
+                         
+                        <button><i class="fab fa-searchengin"></i></button>
                     
-                        <button>Go</button>
                     </form>
                 </div>    
                 </div> 
             </div>
             
             
-        </header>
-
-    
+        </div>
+        

@@ -64,7 +64,7 @@
     </a>
 </div>
 
-<div class="container">
+<div class="container pb-3">
     <div class="row">
     <% data["articles"].forEach(function(news) { %>
         
@@ -83,7 +83,7 @@
                            
                     <p class=" card-text description"><%=news.description%></p>
                     
-                    <p><a class="link" href="/news/headlines/<%=news.title%>" target="blank"> Read More..</a></p>
+                    <p><a class="link" href="/news/<%=news.title%>" target="blank"> Read More..</a></p>
                     
                 </div>
 
