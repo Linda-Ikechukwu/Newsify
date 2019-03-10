@@ -76,9 +76,9 @@
                         <%= news["title"] %>
                     </h5>
                     <p class="card-subtitle">
-                        <span>Source<%= news["source"]["name"] %> </span> <br />
+                        <span>Source : <%= news["source"]["name"] %> </span> <br />
                         <%let date = news.publishedAt.substring(0, 10);%>
-                        <span> Date:<%= date %></span>
+                        <span> Date : <%= date %></span>
                     </p>
                            
                     <p class=" card-text description"><%=news.description%></p>

@@ -20,7 +20,7 @@ app.get("/news", (req, res)=>{
   let url = "https://newsapi.org/v2/top-headlines?language=en&source!=reddit&apiKey=9b2406747cdb42a4bccfa4a7967da150&pageSize=99";
   request.get(url,(error,response,body)=>{
     if(!error && response.statusCode == 200){
-      let data = JSON.parse(body);
+      let data = JSON.parse(body); 
       res.render("home", {data: data});
     }else{
       res.render("404");

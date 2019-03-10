@@ -12,10 +12,10 @@
                 </div>
                 <div class="p-4">
                     <h4 class="card-subtitle">
-                        <span>Source:<%= news["source"]["name"] %> </span>  <br />
-                        <span> Date:<%= news["publishedAt"].substring(0, 10); %></span>
+                        <span>Source : <%= news["source"]["name"] %> </span>  <br />
+                        <span> Date : <%= news["publishedAt"].substring(0, 10); %></span>
                     </h4>
-                    <p class="pt-3"><%= news["content"] %></p>
+                    <p class="pt-3"><%= news["content"] !== null ? news["content"] : 'Sorry , No content Available' %></p>
                 </div>
                 
             </div>
