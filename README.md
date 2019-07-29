@@ -4,7 +4,7 @@ It is built on Express and uses EJS for templating.
 The app curates news from thousand of sources, which can then be filtered in terms of to category or keyword.
 
 To get a copy running on your local system, run the following commands:
-- git clone 
+- git clone https://github.com/Linda-Ikechukwu/Newsify.git 
 - npm install
 - nodemon app.js
 
